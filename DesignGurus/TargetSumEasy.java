@@ -16,21 +16,22 @@ class TargetSumEasy {
     }
 
     public int[] twoSum(int[] inputArr, int targetSum) {
-        int[] res = new int[] { 0, 0 };
+        // int[] res = new int[] { 0, 0 };
         int firstPointer = 0;
         int secondPointer = inputArr.length - 1;
 
         while (firstPointer < secondPointer) {
             int tempSum = inputArr[firstPointer] + inputArr[secondPointer];
-            if (tempSum == targetSum) {
-                res[0] = firstPointer;
-                res[1] = secondPointer;
-                return res;
-            } else if (tempSum < targetSum)
+            if (tempSum == targetSum)
+                return new int[] { firstPointer, secondPointer };
+            // res[0] = firstPointer;
+            // res[1] = secondPointer;
+            // return res;
+            else if (tempSum < targetSum)
                 firstPointer += 1;
             else if (tempSum > targetSum)
                 secondPointer -= 1;
         }
-        return res;
+        return new int[] { 0, 0 };
     }
 }
