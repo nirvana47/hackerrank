@@ -6,7 +6,7 @@ import java.util.HashMap;
  */
 class TargetSumEasy {
     public static void main(String[] args) {
-        int[] arr = new int[] { 0, 7, 2, 3, 4, 5 };
+        int[] arr = new int[] { 0, 2, 3, 4, 5, 7 };
         int[] resultArr = new int[2];
         TargetSumEasy t = new TargetSumEasy();
 
