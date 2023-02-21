@@ -32,6 +32,6 @@ class TargetSumEasy {
             else if (tempSum > targetSum)
                 secondPointer -= 1;
         }
-        return new int[] { 0, 0 };
+        return new int[] { -1, -1 };
     }
 }
