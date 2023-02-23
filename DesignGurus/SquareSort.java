@@ -8,9 +8,9 @@ public class SquareSort {
         int[] squareArr;
         squareArr = ss.makeSquare(arr);
         
-        for (int arrItem : arr)
-            System.out.print(arrItem + " ");
-        System.out.println();
+        // for (int arrItem : arr)
+        //     System.out.print(arrItem + " ");
+        // System.out.println();
         for (int arrItem : squareArr)
             System.out.print(arrItem + " ");
         System.out.println();
@@ -25,7 +25,7 @@ public class SquareSort {
         while (leftPointer <= rightPointer) {
             int leftSq = arr[leftPointer] * arr[leftPointer];
             int rightSq = arr[rightPointer] * arr[rightPointer];
-            System.out.println("Left Pointer: " + leftPointer + " | Right Pointer: " + rightPointer);
+            // System.out.println("Left Pointer: " + leftPointer + " | Right Pointer: " + rightPointer);
 
             if (leftSq > rightSq) {
                 squarrArr[arrLen] = leftSq;
