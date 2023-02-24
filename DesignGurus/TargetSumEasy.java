@@ -6,12 +6,12 @@ import java.util.HashMap;
  */
 class TargetSumEasy {
     public static void main(String[] args) {
-        int[] arr = new int[] { 0, 2, 3, 4, 5, 7 };
+        int[] arr = new int[] { -2, -1, 0, 1, 3, 4 }; // length = 6
         int[] resultArr = new int[2];
         TargetSumEasy t = new TargetSumEasy();
 
         // resultArr = t.twoSum(arr, 6);
-        resultArr = t.twoSumHashMap(arr, 7);
+        resultArr = t.twoSumHashMap(arr, 0);
 
         for (int i : resultArr)
             System.out.print(i + " ");
