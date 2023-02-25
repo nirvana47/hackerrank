@@ -6,7 +6,8 @@ public class TripletSumToZero {
                 "Triplet sum to Zero: Given an array of unsorted numbers, find all unique triplets in it that add up to zero.");
         // int[] unsortedArr = new int[] { -3, 0, 1, 2, -1, 1, -2 };
         // int[] unsortedArr = new int[] { -5, 2, -1, -2, 3 };
-        int[] unsortedArr = new int[] { -1, 0, 1, 2, -1, -4 };
+        // int[] unsortedArr = new int[] { -1, 0, 1, 2, -1, -4 };
+        int[] unsortedArr = new int[] { -2, 0, 0, 2, 2 };
 
         TripletSumToZero tsz = new TripletSumToZero();
 
@@ -14,16 +15,6 @@ public class TripletSumToZero {
         System.out.println();
         System.out.println(list);
         System.out.println();
-
-        // for (int i = 0; i < list.size(); i++) {
-        // List<Integer> innerList = list.get(i);
-        // System.out.print("List " + i + ": ");
-        // for (int j = 0; j < innerList.size(); j++) {
-        // int value = innerList.get(j);
-        // System.out.print(value + " ");
-        // }
-        // System.out.println();
-        // }
     }
 
     public List<List<Integer>> searchTriplets(int[] arr) {
