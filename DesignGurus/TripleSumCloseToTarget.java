@@ -12,6 +12,8 @@ public class TripleSumCloseToTarget {
     }
 
     int TripletSumCloseToTarget(int[] nums, int targetSum) {
+        int minDiff = Integer.MAX_VALUE;
+        
         if (nums.length < 3)
             return -1;
 
@@ -21,8 +23,24 @@ public class TripleSumCloseToTarget {
         for (int i = 0; i < nums.length - 2; i++) {
             if (i > 0 && nums[i] == nums[i - 1])
                 continue;
-            
+            else {
+                int leftPointer = i + 1;
+                int rightPointer = nums.length - 1;
+                while (leftPointer < rightPointer) {
+                    int tempDiff = targetSum - nums[i] - nums[leftPointer] - nums[rightPointer];
+                    if (tempDiff == 0)
+                        return nums[i] + nums[leftPointer] + nums[rightPointer];
+                    else if (tempDiff < minDiff) {
+                        minDiff = tempDiff;
+                    }
+                    if (tempDiff < 0) {
+                        rightPointer -= 1;
+                    } else {
+                        leftPointer += 1;
+                    }
+                }
+            }
         }
-        return 0;
+        return targetSum - minDiff;
     }
 }
